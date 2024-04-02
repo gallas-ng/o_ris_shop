@@ -1,0 +1,9 @@
+{% extends "oscar/communication/emails/base.txt" %}
+{% load i18n %}
+{% load url_tags %}
+
+{% block body %}{% autoescape off %}
+{% blocktrans with name=site.name %}You're receiving this e-mail because you registered to our website {{ name }}.{% endblocktrans %}
+
+{% trans "Please go to the following page to find our products:" %}
+{% absolute_url site.domain homepage_url %}{% endautoescape %}{% endblock %}

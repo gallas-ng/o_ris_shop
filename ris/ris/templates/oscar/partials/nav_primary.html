@@ -1,0 +1,221 @@
+{% load currency_filters %}
+{% load category_tags %}
+{% load i18n %}
+{% load static %}
+
+
+{% block extrastyles %}
+    <style>
+        /* Réduire la taille du conteneur du carrousel */
+        #carouselExampleIndicators {
+            width: 100%; /* Définir la largeur à 90% */
+            margin: 0 auto; /* Centrer le carrousel horizontalement */
+            max-width: 100%; /* Limiter la largeur maximale pour éviter que le carrousel ne devienne trop large */
+            padding: 10px;
+        }
+
+        /* Réduire la taille des images dans le carrousel */
+        .carousel-item img {
+            max-width: 100%; /* Assurer que les images ne dépassent pas la largeur du conteneur */
+            max-height: 280px; /* Définir une hauteur maximale pour toutes les images */
+            width: auto; /* Ajuster la largeur en conséquence */
+            height: auto; /* Ajuster la hauteur en conséquence */
+            margin: 0 auto; /* Centrer les images horizontalement */
+        }
+        /* Style pour le titre et la description du carrousel */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+            color: #fff; /* Texte blanc */
+            padding: 20px; /* Espacement intérieur */
+        }
+
+        /* Style pour les indicateurs de carrousel */
+        .carousel-indicators {
+            bottom: 20px; /* Positionnement des indicateurs en bas */
+            margin: 0 auto;
+        }
+
+        .carousel-indicators li {
+            background-color: #fff; /* Couleur de fond des indicateurs */
+            border: 1px solid #000; /* Bordure des indicateurs */
+        }
+
+        .carousel-indicators .active {
+            background-color: #000; /* Couleur de fond de l'indicateur actif */
+        }
+
+        /* Style pour les flèches de contrôle du carrousel */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: auto; /* Largeur automatique */
+            color: #fff; /* Couleur des flèches */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+        }
+
+        .c_carousel {
+            margin-bottom: 30px;
+            
+        }
+
+        
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        
+        }
+
+        .grid-item {
+            text-align: center;
+        }
+
+        .grid-item img {
+            width: 55px;
+            height: 55px;
+            margin-bottom: 0px;
+            margin: 7px;
+        }
+      
+
+    </style>
+{% endblock %}
+
+
+
+<div class="c_container">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 1</h5>
+                            <p>Description for Slide 1.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 2</h5>
+                            <p>Description for Slide 2.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 3</h5>
+                            <p>Description for Slide 3.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 1</h5>
+                            <p>Description for Slide 1.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 2</h5>
+                            <p>Description for Slide 2.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Title 3</h5>
+                            <p>Description for Slide 3.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<nav class="{% block nav_classes %}navbar navbar-expand-lg navbar-dark {% endblock %}" style="background-color:rgb(10, 58, 140);">
+    {% block navbar_toggler %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    {% endblock %}
+
+    {% block navbar_basket %}
+        <a class="btn btn-secondary float-right btn-cart ml-auto d-inline-block d-md-none" href="{% url 'basket:summary' %}">
+            <i class="fas fa-shopping-cart"></i>
+            {% trans "Basket" %}
+            {% if not request.basket.is_empty %}
+                {% if request.basket.is_tax_known %}
+                    {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}
+                        Total: {{ total }}
+                    {% endblocktrans %}
+                {% else %}
+                    {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}
+                        Total: {{ total }}
+                    {% endblocktrans %}
+                {% endif %}
+            {% endif %}
+        </a>
+    {% endblock %}
+
+    {% block navbar_collapse %}
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {% block nav %}
+                <ul class="navbar-nav mr-auto">
+                    {% block nav_items %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {% block browse_store_text %}{% trans "Browse store" %}{% endblock %}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% category_tree depth=1 as tree_categories %}
+                                <a class="dropdown-item" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a>
+                                {% if tree_categories %}
+                                    <div class="dropdown-divider"></div>
+                                    {% for tree_category in tree_categories %}
+                                        <a class="dropdown-item" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                    {% endfor %}
+                                {% endif %}
+                                <div class="dropdown-divider"></div>
+                                {% block nav_dropdown_extra_items %}
+                                    <a class="dropdown-item" href="{% url 'offer:list' %}">{% trans "Offers" %}</a>
+                                {% endblock %}
+                            </div>
+                        </li>
+                   {% endblock %}
+               </ul>
+            {% endblock %}
+
+            {% block nav_extra %}
+                {% include "oscar/partials/search.html" %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+</nav>

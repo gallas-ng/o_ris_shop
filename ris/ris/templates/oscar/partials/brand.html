@@ -1,0 +1,69 @@
+{% load static %}
+{% load i18n %}
+
+{% block extrastyles %}
+    <style>
+        /* Réduire la taille du conteneur du carrousel */
+        #carouselExampleIndicators {
+            max-width: 300px; /* Définir la largeur maximale */
+            margin: 0 auto; /* Centrer le carrousel horizontalement */
+        }
+        /* Style pour le titre et la description du carrousel */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+            color: #fff; /* Texte blanc */
+            padding: 20px; /* Espacement intérieur */
+        }
+
+        /* Style pour les indicateurs de carrousel */
+        .carousel-indicators {
+            bottom: 20px; /* Positionnement des indicateurs en bas */
+        }
+
+        .carousel-indicators li {
+            background-color: #fff; /* Couleur de fond des indicateurs */
+            border: 1px solid #000; /* Bordure des indicateurs */
+        }
+
+        .carousel-indicators .active {
+            background-color: #000; /* Couleur de fond de l'indicateur actif */
+        }
+
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Style pour les flèches de contrôle du carrousel */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: auto; /* Largeur automatique */
+            color: #fff; /* Couleur des flèches */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+        }
+
+        /* Style pour le bouton Google dans le carrousel */
+        .google-btn {
+            display: inline-block;
+            background-color: #4285F4;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+    </style>
+{% endblock %}
+
+
+<div  style="font-family:Verdana, Geneva, Tahoma, sans-serif;display:flex;" class="col-sm-6 h1" >
+    <img src="{% static 'images/ris.png' %}" alt="" style="width: 250px;height: 75px; border-radius: 10px; border: 2px double rgb(9, 47, 130);">
+    <small> {{ shop_tagline }}</small>
+</div>
+
+
+
+
