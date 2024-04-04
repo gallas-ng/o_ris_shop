@@ -10,3 +10,12 @@ python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
+
+# Apply Some configurations 
+python manage.py shell < site_config.py
+
+# Create categories
+python manage.py shell < create_categories.py
+
+# Create product attributes
+python manage.py shell < create_product_attributes.py

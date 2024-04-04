@@ -9,8 +9,8 @@ class ShippingAddressForm(CoreShippingAddressForm):
         self.adjust_country_field()
 
     def adjust_country_field(self):
-        countries = Country._default_manager.filter(is_shipping_country=True)
-        #countries = Country._default_manager.filter(printable_name='Senegal')
+        # countries = Country._default_manager.filter(is_shipping_country=True)
+        countries = Country._default_manager.filter(printable_name='Senegal')
         
         # No need to show country dropdown if there is only one option
         if len(countries) == 1:

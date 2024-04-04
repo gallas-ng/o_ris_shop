@@ -45,14 +45,59 @@
             background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
         }
 
-        /* Style pour le bouton Google dans le carrousel */
-        .google-btn {
-            display: inline-block;
-            background-color: #4285F4;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
+        .two h1 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-family:'Courier New', Courier, monospace;
+            font-weight:800;
+            font-size: 28px;
+            color: #807e7e;
+            -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+        }
+
+        .two h1 span {
+            display: block;
+            font-size: 0.5em;
+            line-height: 1.3;
+        }
+
+        .two h1 em {
+            font-style: normal;
+            font-weight: 600;
+        }      
+        
+        .two h1 {
+            text-transform: capitalize;
+        }
+        .two h1:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 2px;
+            content: "";
+            background-color: rgb(10, 58, 140);
+        }
+
+        .two h1 span {
+            font-size: 13px;
+            font-weight: 500;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 3em;
+            padding-left: 0.25em;
+            color: rgba(0, 0, 0, 0.4);
+            padding-bottom: 8px;
+        }
+        .alt-two h1 {
+            text-align:center;
+        }
+        .alt-two h1:before {
+            left:50%; margin-left:-30px;
         }
 
     </style>
@@ -60,7 +105,12 @@
 
 
 <div  style="font-family:Verdana, Geneva, Tahoma, sans-serif;display:flex;" class="col-sm-6 h1" >
-    <img src="{% static 'images/ris.png' %}" alt="" style="width: 250px;height: 75px; border-radius: 10px; border: 2px double rgb(9, 47, 130);">
+    <!-- <img src="{% static 'images/ris.png' %}" alt="" style="max-width: 280px;max-height: 85px; border-radius: 10px; border: 2px double rgb(9, 47, 130);"> -->
+    <div class="two">
+        <h1>RIS <strong style="color: rgb(10, 58, 140);">Electronique</strong style="color: ;">
+          <span>Royaume Informatique du Sénégal</span>
+        </h1>
+      </div>
     <small> {{ shop_tagline }}</small>
 </div>
 
