@@ -33,7 +33,7 @@ class charge_per_item(methods.Base):
     name = 'Livraison Standard'
 
     charge_per_item = D('1500.00')
-    threshold = D('100000.00')
+    threshold = D('1000000.00')
 
     def calculate(self, basket):
         # Free for orders over some threshold
