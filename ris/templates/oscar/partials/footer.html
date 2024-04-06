@@ -1,5 +1,7 @@
 {% load static %}
+{% load currency_filters %}
 {% block extrastyles %}
+{% load category_tags %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link rel="stylesheet" href="{% static 'scss/footer.css' %}">
@@ -234,47 +236,30 @@
                     <img src="{% static 'images/logo_2.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_3.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_4.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_5.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_6.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_7.png' %}" height="100" width="250" alt="" />
                 </div>
                 <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                    <img src="{% static 'images/logo_2.png' %}" height="100" width="250" alt="" />
                 </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-                </div>
+                
             </div>
         </div>
         <div class="f_container">
             <div class="row">
                 <div class="col-md-3" >
-                    <a href="index.html" ><img src="{% static 'images/ris_icon.jpg' %}" style="height: 150px;width: 150px;border: 4px groove rgb(219, 218, 215);" alt="" class="img-fluid logo-footer"></a>
+                    <a href="{{ homepage_url }}" ><img src="{% static 'images/ris_icon.jpg' %}" style="height: 150px;width: 150px;border: 4px groove rgb(219, 218, 215);" alt="" class="img-fluid logo-footer"></a>
 
                 </div>
                 <div class="col-md-3">
@@ -282,9 +267,9 @@
                         <h2>Liens utiles</h2>
                         <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
                         <div class="use-links">
-                            <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Acceuil</a></li>
-                            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> A propos</a></li>
-                            <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Catalogue </a></li>
+                            <li><a href="{{ homepage_url }}"><i class="fa-solid fa-angles-right"></i> Acceuil</a></li>
+                            <li><a href="{% url 'offer:list' %}"><i class="fa-solid fa-angles-right"></i> Offres</a></li>
+                            <li><a href="{% url 'catalogue:index' %}"><i class="fa-solid fa-angles-right"></i> Catalogue </a></li>
                         </div>
                     </div>
 
@@ -294,7 +279,7 @@
                         <h2>Nous suivre</h2>
                         <img src="./assets/images/about/home_line.png" alt="">
                         <div class="social-icons">
-                            <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://www.facebook.com/royaumeinformatiquedusenegal"><i class="fab fa-facebook"></i> Facebook</a></li>
                             <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
                             <li><a href=""><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
                         </div>

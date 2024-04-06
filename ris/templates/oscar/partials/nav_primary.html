@@ -13,6 +13,20 @@
             max-width: 100%; /* Limiter la largeur maximale pour éviter que le carrousel ne devienne trop large */
             padding: 10px;
         }
+        
+        #carouselExampleIndicators1 {
+            width: 100%; /* Définir la largeur à 90% */
+            margin: 0 auto; /* Centrer le carrousel horizontalement */
+            max-width: 100%; /* Limiter la largeur maximale pour éviter que le carrousel ne devienne trop large */
+            padding: 10px;
+        }
+
+        #carouselExampleIndicators2 {
+            width: 100%; /* Définir la largeur à 90% */
+            margin: 0 auto; /* Centrer le carrousel horizontalement */
+            max-width: 100%; /* Limiter la largeur maximale pour éviter que le carrousel ne devienne trop large */
+            padding: 10px;
+        }
 
         /* Réduire la taille des images dans le carrousel */
         .carousel-item img {
@@ -24,9 +38,11 @@
         }
         /* Style pour le titre et la description du carrousel */
         .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+            background-color: rgba(12, 12, 12, 0.5); /* Arrière-plan semi-transparent */
             color: #fff; /* Texte blanc */
-            padding: 20px; /* Espacement intérieur */
+            padding: 10px; /* Espacement intérieur */
+            border-radius: 15px;
+            
         }
 
         /* Style pour les indicateurs de carrousel */
@@ -41,7 +57,7 @@
         }
 
         .carousel-indicators .active {
-            background-color: #000; /* Couleur de fond de l'indicateur actif */
+            background-color: rgb(10, 58, 140); /* Couleur de fond de l'indicateur actif */
         }
 
         /* Style pour les flèches de contrôle du carrousel */
@@ -89,7 +105,7 @@
 
 <div class="c_container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -98,58 +114,68 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{% static 'images/slide_5.jpg' %}"  alt="First slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 1</h5>
-                            <p>Description for Slide 1.</p>
+                        <img class="d-block w-100" src="{% static 'images/slide_1.jpg' %}"  alt="First slide">                  
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'images/slide_2.jpg' %}"  alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'images/slide_3.jpg' %}"  alt="Third slide">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'images/icon_1.png' %}" style="padding: 70px;" alt="First slide">
+                        <div class="carousel-caption d-none d-block">
+                            <h5>Shipping</h5>
+                            <p>livraison partout à Dakar.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'images/slide_5.jpg' %}"  alt="Second slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 2</h5>
-                            <p>Description for Slide 2.</p>
+                        <img class="d-block w-100" src="{% static 'images/icon_2.png' %}" style="padding: 70px;"  alt="Second slide">
+                        <div class="carousel-caption d-none d-block">
+                            <h5>Cash on Delivery</h5>
+                            <p>Vous pouvez simplement payer à la livraison.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'images/slide_5.jpg' %}"  alt="Third slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 3</h5>
-                            <p>Description for Slide 3.</p>
+                        <img class="d-block w-100" src="{% static 'images/icon_3.png' %}" style="padding: 70px;" alt="Third slide">
+                        <div class="carousel-caption d-none d-block">
+                            <h5>High quality</h5>
+                            <p>Produits de qualité supérieure.</p>
                         </div>
                     </div>
                 </div>
                 
             </div>
         </div>
-        <div class="col-md-6">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <div class="col-md-4">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{% static 'images/slide_5.jpg' %}"  alt="First slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 1</h5>
-                            <p>Description for Slide 1.</p>
-                        </div>
+                        <img class="d-block w-100" src="{% static 'images/slide_7.jpg' %}"  alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'images/slide_5.jpg' %}"  alt="Second slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 2</h5>
-                            <p>Description for Slide 2.</p>
-                        </div>
+                        <img class="d-block w-100" src="{% static 'images/slide_8.jpg' %}"  alt="Second slide">  
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="{% static 'oscar/img/slide_5.jpg' %}"  alt="Third slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Title 3</h5>
-                            <p>Description for Slide 3.</p>
-                        </div>
+                        <img class="d-block w-100" src="{% static 'images/slide_9.jpg' %}"  alt="Third slide">
                     </div>
                 </div>
                 

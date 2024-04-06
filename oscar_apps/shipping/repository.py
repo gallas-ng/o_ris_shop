@@ -54,10 +54,12 @@ class charge_per_item(methods.Base):
 class self_pick_up(methods.NoShippingRequired):
 
     code = 'no_shipping'
-    name = 'Recuperer sur place'
+    name = 'Recupérer à la boutique'
+
+    
 
 class Repository(CoreRepository):
 
-    methods = (charge_per_item(), self_pick_up)
+    methods = (charge_per_item(), self_pick_up())
 
 
