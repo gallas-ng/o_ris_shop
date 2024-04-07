@@ -19,3 +19,6 @@ python manage.py shell < create_categories.py
 
 # Create product attributes
 python manage.py shell < create_product_attributes.py
+
+# Countries add
+python manage.py oscar_populate_countries

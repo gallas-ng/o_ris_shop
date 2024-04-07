@@ -108,6 +108,8 @@ SITE_ID = 1
 
 ADMINS = [("gallas","fniang89@gmail.com")]
 
+EMAIL_SUBJECT_PREFIX = "RIS-Electronique"
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
