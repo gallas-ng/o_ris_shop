@@ -21,4 +21,4 @@ python manage.py shell < create_categories.py
 python manage.py shell < create_product_attributes.py
 
 # Countries add
-python manage.py oscar_populate_countries
+# python manage.py oscar_populate_countries
