@@ -24,6 +24,8 @@ if not DEBUG:
     # and renames the files with unique names for each version to support long-term caching
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+    STORAGES = {}
+
 try:
     from .local import *
 except ImportError:
